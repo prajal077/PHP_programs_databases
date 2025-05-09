@@ -26,7 +26,7 @@
             } else {
                 $conn = new mysqli("localhost", "root", "", "student_db");
 
-                $res = $conn->query("SELECT id, username, password FROM std WHERE username = '$username'");
+                $res = $conn->query("SELECT id, username, password FROM std WHERE username = '$username'");  //already available vako username
 
                 $users = $res->fetch_assoc(); //fetch_assoc() takes one row from that result as an associative array (key-value pairs).
                 print_r($users);
